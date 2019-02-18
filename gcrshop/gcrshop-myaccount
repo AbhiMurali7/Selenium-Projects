@@ -1,0 +1,36 @@
+package gcrshoppack;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class MyAccount {
+
+	public static void main(String[] args) {
+		WebDriver d;
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe");
+		String baseUrl = "http://www.gcrit.com/build3/";
+		d = new ChromeDriver();
+		d.get(baseUrl);
+		d.findElement(By.partialLinkText("My Account")).click();
+		d.findElement(By.xpath("//*[@id=\"tdb4\"]/span[2]")).click();
+		d.findElement(By.cssSelector("input[value='f']")).click();
+		d.findElement(By.name("firstname")).sendKeys("Abhi");
+		d.findElement(By.name("lastname")).sendKeys("Murali");
+		d.findElement(By.id("dob")).sendKeys("07/01/1996");
+		d.findElement(By.name("email_address")).sendKeys("abhimurali7196@gmail.com");
+		d.findElement(By.name("street_address")).sendKeys("chamiers road");
+		d.findElement(By.name("postcode")).sendKeys("600018");
+		d.findElement(By.name("city")).sendKeys("chennai");
+		d.findElement(By.name("state")).sendKeys("tamilnadu");
+        Select s = new Select(d.findElement(By.name("country")));
+        s.selectByIndex(99);
+        d.findElement(By.name("telephone")).sendKeys("9876543210");
+		d.findElement(By.name("newsletter")).click();
+		d.findElement(By.name("password")).sendKeys("Abhi7196");;
+		d.findElement(By.name("confirmation")).sendKeys("Abhi7196");;
+		d.findElement(By.xpath("//*[@id=\"tdb4\"]/span[2]")).click();
+		d.findElement(By.xpath("//*[@id=\"tdb5\"]/span[2]")).click();
+	}
+}
