@@ -19,14 +19,14 @@ public class MyAccount {
 		d.findElement(By.name("firstname")).sendKeys("Abhi");
 		d.findElement(By.name("lastname")).sendKeys("Murali");
 		d.findElement(By.id("dob")).sendKeys("07/01/1996");
-		d.findElement(By.name("email_address")).sendKeys("abhimurali7196@gmail.com");
+		d.findElement(By.name("email_address")).sendKeys("abhimurali@gmail.com");
 		d.findElement(By.name("street_address")).sendKeys("chamiers road");
 		d.findElement(By.name("postcode")).sendKeys("600018");
 		d.findElement(By.name("city")).sendKeys("chennai");
 		d.findElement(By.name("state")).sendKeys("tamilnadu");
         Select s = new Select(d.findElement(By.name("country")));
         s.selectByIndex(99);
-        d.findElement(By.name("telephone")).sendKeys("9876543210");
+        d.findElement(By.name("telephone")).sendKeys("8956534218");
 		d.findElement(By.name("newsletter")).click();
 		d.findElement(By.name("password")).sendKeys("Abhi7196");;
 		d.findElement(By.name("confirmation")).sendKeys("Abhi7196");;
